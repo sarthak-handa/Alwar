@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2 Days. 1 Night. Infinite Memories. | Delhi → Alwar → Sariska</title>
+<meta name="description" content="An immersive cinematic journey — 2 Days, 1 Night road trip from Delhi to Alwar & Sariska Tiger Reserve with the squad.">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--deep:#0b1d3a;--sky:#4a90d9;--white:#f0f4f8;--earth:#8b6914;--gold:#d4a853;--accent:#00d4ff;--glass:rgba(255,255,255,0.08);--glass2:rgba(255,255,255,0.15)}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{font-family:'Outfit',sans-serif;background:var(--deep);color:var(--white);overflow-x:hidden}
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-track{background:var(--deep)}
+::-webkit-scrollbar-thumb{background:linear-gradient(var(--accent),var(--sky));border-radius:3px}
+
+/* HERO */
+.hero{position:relative;height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden;background:linear-gradient(180deg,#0b1d3a 0%,#1a3a6a 40%,#4a7ab5 70%,#8bb8d0 90%,#c4dce8 100%)}
+.hero-img{position:absolute;top:0;left:0;width:100%;height:100%;background:url('images/road_trip_hero.png') center/cover;opacity:.2;z-index:1}
+.hero-clouds{position:absolute;top:0;left:0;width:200%;height:100%;opacity:.3}
+.cloud{position:absolute;background:radial-gradient(ellipse,rgba(255,255,255,.5),transparent 70%);border-radius:50%;filter:blur(30px)}
+.c1{width:500px;height:200px;top:10%;left:-10%;animation:drift 25s linear infinite}
+.c2{width:700px;height:250px;top:25%;left:30%;animation:drift 35s linear infinite reverse}
+.c3{width:400px;height:150px;top:5%;left:60%;animation:drift 20s linear infinite}
+.c4{width:600px;height:220px;top:35%;left:-5%;animation:drift 30s linear infinite reverse}
+@keyframes drift{0%{transform:translateX(0)}100%{transform:translateX(50vw)}}
+.hero-road{position:absolute;bottom:0;left:0;width:100%;height:200px;background:linear-gradient(0deg,#2a2a2a,transparent);clip-path:polygon(30% 100%,70% 100%,60% 0%,40% 0%);opacity:.4}
+.hero-lines{position:absolute;bottom:20px;left:50%;width:4px;height:40px;background:#fff;opacity:.5;animation:roadLine 1s infinite;transform:translateX(-50%)}
+@keyframes roadLine{0%{opacity:.5;transform:translateX(-50%) translateY(0)}100%{opacity:0;transform:translateX(-50%) translateY(60px)}}
+.hero-content{position:relative;z-index:10;text-align:center;padding:0 20px}
+.hero-date{font-family:'Space Grotesk',sans-serif;font-size:clamp(.8rem,1.5vw,1rem);letter-spacing:8px;text-transform:uppercase;color:var(--accent);margin-bottom:20px;opacity:0;animation:fadeUp .8s .3s forwards}
+.hero-title{font-size:clamp(2.5rem,7vw,5.5rem);font-weight:900;line-height:1.05;background:linear-gradient(135deg,#fff,#a8d8ea,#fff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:16px;opacity:0;animation:fadeUp .8s .5s forwards}
+.hero-sub{font-size:clamp(1rem,2.5vw,1.6rem);font-weight:300;letter-spacing:3px;color:rgba(255,255,255,.7);margin-bottom:40px;opacity:0;animation:fadeUp .8s .7s forwards}
+.hero-route{display:flex;align-items:center;justify-content:center;gap:12px;font-family:'Space Grotesk',sans-serif;font-size:clamp(.7rem,1.2vw,.9rem);letter-spacing:4px;opacity:0;animation:fadeUp .8s .9s forwards}
+.hero-route span{color:var(--accent)}
+.scroll-ind{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;opacity:0;animation:fadeUp .8s 1.2s forwards}
+.scroll-ind p{font-size:.7rem;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.5)}
+.scroll-ind .arrow{width:20px;height:20px;border-right:2px solid var(--accent);border-bottom:2px solid var(--accent);transform:rotate(45deg);animation:bounce 1.5s infinite}
+@keyframes bounce{0%,100%{transform:rotate(45deg) translate(0,0)}50%{transform:rotate(45deg) translate(5px,5px)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+
+/* PARTICLES */
+.particles{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0}
+.particle{position:absolute;width:3px;height:3px;background:var(--accent);border-radius:50%;opacity:.3;animation:float 8s infinite}
+@keyframes float{0%,100%{transform:translateY(0) translateX(0);opacity:.3}50%{transform:translateY(-100px) translateX(30px);opacity:.6}}
+
+/* JOURNEY CAR SECTION */
+.journey-sec{position:relative;min-height:300vh;background:linear-gradient(180deg,var(--deep),#0d2847,#122d50);overflow:hidden}
+.journey-road{position:sticky;top:0;height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.road-bg{position:absolute;bottom:0;left:0;width:100%;height:40%;background:linear-gradient(0deg,#1a1a1a 0%,#2d2d2d 40%,transparent 100%)}
+.road-line{position:absolute;bottom:15%;left:0;width:100%;height:4px;display:flex;gap:40px}
+.road-dash{width:60px;height:4px;background:rgba(255,255,255,.4);border-radius:2px;flex-shrink:0}
+.car-container{position:relative;z-index:5;transition:transform .1s linear}
+.car-svg{width:180px;height:auto;filter:drop-shadow(0 10px 30px rgba(0,0,0,.5))}
+.journey-labels{position:absolute;z-index:10;pointer-events:none}
+.j-label{position:absolute;background:var(--glass2);backdrop-filter:blur(10px);padding:10px 18px;border-radius:20px;font-size:.85rem;font-weight:500;border:1px solid rgba(255,255,255,.1);opacity:0;transform:translateY(20px);transition:all .6s cubic-bezier(.16,1,.3,1);white-space:nowrap}
+.j-label.visible{opacity:1;transform:translateY(0)}
+
+/* PICKUP SCENE */
+.pickup-sec{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;background:radial-gradient(ellipse at center,#1a3a6a,var(--deep));overflow:hidden}
+.pickup-content{text-align:center;z-index:5;position:relative}
+.pickup-content h2{font-size:clamp(2rem,5vw,4rem);font-weight:800;margin-bottom:16px;opacity:0}
+.pickup-content p{font-size:1.2rem;color:rgba(255,255,255,.6);opacity:0}
+.pickup-glow{position:absolute;width:400px;height:400px;background:radial-gradient(circle,rgba(0,212,255,.15),transparent 70%);border-radius:50%;top:50%;left:50%;transform:translate(-50%,-50%);animation:pulse 3s infinite}
+@keyframes pulse{0%,100%{transform:translate(-50%,-50%) scale(1);opacity:.5}50%{transform:translate(-50%,-50%) scale(1.2);opacity:.8}}
+
+/* SQUAD CARDS */
+.squad-sec{position:relative;padding:100px 20px;background:var(--deep);overflow:hidden}
+.squad-sec h2{text-align:center;font-size:clamp(2rem,4vw,3rem);font-weight:800;margin-bottom:60px;background:linear-gradient(90deg,var(--accent),var(--sky));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.squad-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;max-width:1000px;margin:0 auto}
+.squad-card{background:var(--glass);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:30px 24px;text-align:center;transition:all .4s cubic-bezier(.16,1,.3,1);cursor:default;opacity:0;transform:translateY(40px)}
+.squad-card:hover{transform:translateY(-8px) scale(1.03);border-color:var(--accent);box-shadow:0 20px 60px rgba(0,212,255,.15)}
+.squad-card.visible{opacity:1;transform:translateY(0)}
+.squad-avatar{width:80px;height:80px;border-radius:50%;margin:0 auto 16px;display:flex;align-items:center;justify-content:center;font-size:2rem;font-weight:800;background:linear-gradient(135deg,var(--accent),var(--sky));color:var(--deep)}
+.squad-card h3{font-size:1.2rem;font-weight:700;margin-bottom:6px}
+.squad-card .role{font-size:.8rem;color:var(--accent);letter-spacing:2px;text-transform:uppercase;margin-bottom:8px}
+.squad-card .loc{font-size:.85rem;color:rgba(255,255,255,.5)}
+
+/* ROAD TRIP VIBES */
+.vibes-sec{position:relative;min-height:100vh;overflow:hidden}
+.vibes-bg{position:absolute;top:0;left:0;width:100%;height:100%}
+.vibes-bg img{width:100%;height:100%;object-fit:cover;opacity:.35}
+.vibes-overlay{position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(0deg,var(--deep),transparent 30%,transparent 70%,var(--deep))}
+.vibes-content{position:relative;z-index:5;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;padding:80px 20px;gap:40px}
+.vibe-text{font-size:clamp(1.5rem,3.5vw,2.5rem);font-weight:300;text-align:center;max-width:700px;opacity:0;transform:translateY(30px);line-height:1.5}
+.vibe-text.visible{opacity:1;transform:translateY(0);transition:all .8s cubic-bezier(.16,1,.3,1)}
+.vibe-text em{color:var(--accent);font-style:normal;font-weight:600}
+.music-waves{display:flex;gap:4px;align-items:end;height:40px}
+.music-wave{width:4px;background:var(--accent);border-radius:2px;animation:wave 1s infinite ease-in-out}
+.music-wave:nth-child(1){animation-delay:0s;height:15px}
+.music-wave:nth-child(2){animation-delay:.1s;height:25px}
+.music-wave:nth-child(3){animation-delay:.2s;height:35px}
+.music-wave:nth-child(4){animation-delay:.3s;height:20px}
+.music-wave:nth-child(5){animation-delay:.15s;height:30px}
+.music-wave:nth-child(6){animation-delay:.25s;height:18px}
+.music-wave:nth-child(7){animation-delay:.05s;height:28px}
+@keyframes wave{0%,100%{transform:scaleY(1)}50%{transform:scaleY(.3)}}
+.floating-snack{position:absolute;font-size:2rem;opacity:.6;animation:floatSnack 6s infinite ease-in-out}
+@keyframes floatSnack{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-20px) rotate(10deg)}}
+
+/* ARRIVAL */
+.arrival-sec{position:relative;min-height:100vh;overflow:hidden}
+.arrival-bg{position:absolute;top:0;left:0;width:100%;height:100%}
+.arrival-bg img{width:100%;height:100%;object-fit:cover;opacity:.5}
+.arrival-overlay{position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(0deg,var(--deep) 5%,rgba(11,29,58,.6) 40%,rgba(11,29,58,.8) 100%)}
+.arrival-content{position:relative;z-index:5;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;text-align:center;padding:60px 20px}
+.arrival-time{font-family:'Space Grotesk',sans-serif;font-size:clamp(3rem,8vw,6rem);font-weight:700;color:var(--accent);margin-bottom:10px;opacity:0}
+.arrival-label{font-size:clamp(1rem,2vw,1.4rem);font-weight:300;color:rgba(255,255,255,.6);margin-bottom:20px;opacity:0}
+.arrival-title{font-size:clamp(2rem,5vw,3.5rem);font-weight:800;opacity:0}
+
+/* NIGHT CHILL */
+.night-sec{position:relative;padding:100px 20px;background:linear-gradient(180deg,var(--deep),#050d1a,#0a0a1a);overflow:hidden}
+.neon-glow{position:absolute;width:500px;height:500px;border-radius:50%;filter:blur(100px);opacity:.15}
+.neon1{background:#ff006e;top:-100px;right:-100px}
+.neon2{background:#00d4ff;bottom:-100px;left:-100px}
+.neon3{background:#8338ec;top:50%;left:50%;transform:translate(-50%,-50%)}
+.night-content{position:relative;z-index:5;max-width:1000px;margin:0 auto;text-align:center}
+.night-content h2{font-size:clamp(2rem,4vw,3rem);font-weight:800;margin-bottom:50px;background:linear-gradient(90deg,#ff006e,#8338ec,#00d4ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.night-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;margin-bottom:50px}
+.night-card{background:rgba(255,255,255,.04);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:30px 20px;text-align:center;transition:all .4s;opacity:0;transform:translateY(30px)}
+.night-card.visible{opacity:1;transform:translateY(0)}
+.night-card:hover{border-color:rgba(255,0,110,.3);transform:translateY(-5px);box-shadow:0 15px 40px rgba(255,0,110,.1)}
+.night-card .icon{font-size:2.5rem;margin-bottom:12px}
+.night-card h3{font-size:1rem;font-weight:600;margin-bottom:6px}
+.night-card p{font-size:.8rem;color:rgba(255,255,255,.5)}
+
+/* DAY 2 MORNING */
+.morning-sec{position:relative;min-height:100vh;background:linear-gradient(180deg,#0a0a1a,#1a2a4a,#3a5a8a,#6a9ac0,#a8d4e6);overflow:hidden;display:flex;align-items:center;justify-content:center}
+.sunrise{position:absolute;bottom:30%;left:50%;transform:translateX(-50%);width:300px;height:300px;background:radial-gradient(circle,rgba(255,180,50,.6),rgba(255,120,50,.3),transparent 70%);border-radius:50%;animation:sunrise 4s ease-out forwards;opacity:0}
+@keyframes sunrise{0%{opacity:0;transform:translateX(-50%) translateY(100px) scale(.5)}100%{opacity:1;transform:translateX(-50%) translateY(0) scale(1)}}
+.morning-content{position:relative;z-index:5;text-align:center;padding:60px 20px}
+.morning-content h2{font-size:clamp(2rem,5vw,3.5rem);font-weight:800;margin-bottom:16px;color:#1a2a4a;opacity:0}
+.morning-sub{font-size:1.1rem;color:rgba(26,42,74,.6);margin-bottom:50px;opacity:0}
+.morning-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px;max-width:800px;margin:0 auto}
+.morning-card{background:rgba(255,255,255,.3);backdrop-filter:blur(15px);border:1px solid rgba(255,255,255,.4);border-radius:16px;padding:24px 16px;text-align:center;transition:all .4s;opacity:0;transform:translateY(20px)}
+.morning-card.visible{opacity:1;transform:translateY(0)}
+.morning-card:hover{transform:translateY(-5px);box-shadow:0 10px 30px rgba(0,0,0,.1)}
+.morning-card .icon{font-size:2rem;margin-bottom:10px}
+.morning-card h3{font-size:.95rem;font-weight:600;color:#1a2a4a}
+
+/* SAFARI */
+.safari-sec{position:relative;min-height:100vh;overflow:hidden}
+.safari-bg{position:absolute;top:0;left:0;width:100%;height:100%}
+.safari-bg img{width:100%;height:100%;object-fit:cover;opacity:.45}
+.safari-overlay{position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(0deg,var(--deep) 5%,rgba(11,29,58,.5) 50%,var(--deep) 95%)}
+.safari-content{position:relative;z-index:5;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;text-align:center;padding:60px 20px}
+.safari-content h2{font-size:clamp(2rem,5vw,3.5rem);font-weight:800;margin-bottom:16px;opacity:0}
+.safari-sub{font-size:1.1rem;color:rgba(255,255,255,.6);max-width:600px;margin-bottom:40px;opacity:0}
+.tree-line{display:flex;gap:15px;align-items:end;margin-top:40px}
+.tree{width:30px;background:linear-gradient(0deg,#1a4a2a,#2a6a3a);border-radius:50% 50% 0 0;animation:sway 3s infinite ease-in-out}
+@keyframes sway{0%,100%{transform:rotate(-2deg)}50%{transform:rotate(2deg)}}
+
+/* FOOD SECTION */
+.food-sec{position:relative;min-height:100vh;overflow:hidden}
+.food-bg{position:absolute;top:0;left:0;width:100%;height:100%}
+.food-bg img{width:100%;height:100%;object-fit:cover;opacity:.4}
+.food-overlay{position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(0deg,var(--deep) 5%,rgba(11,29,58,.6) 50%,var(--deep) 95%)}
+.food-content{position:relative;z-index:5;max-width:1000px;margin:0 auto;padding:100px 20px;text-align:center}
+.food-content h2{font-size:clamp(2rem,4vw,3rem);font-weight:800;margin-bottom:50px;background:linear-gradient(90deg,#ff6b35,#ffd700,#ff6b35);-webkit-background-clip:text;-webkit-text-fill-color:transparent;opacity:0}
+.food-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:20px}
+.food-card{background:var(--glass);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:24px 16px;text-align:center;transition:all .4s;opacity:0;transform:scale(.9)}
+.food-card.visible{opacity:1;transform:scale(1)}
+.food-card:hover{transform:scale(1.05);border-color:var(--gold)}
+.food-card .icon{font-size:2.2rem;margin-bottom:10px}
+.food-card h3{font-size:.9rem;font-weight:600}
+
+/* DEPARTURE */
+.depart-sec{position:relative;min-height:100vh;overflow:hidden}
+.depart-bg{position:absolute;top:0;left:0;width:100%;height:100%}
+.depart-bg img{width:100%;height:100%;object-fit:cover;opacity:.5}
+.depart-overlay{position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(0deg,var(--deep) 10%,rgba(11,29,58,.5) 50%,var(--deep) 90%)}
+.depart-content{position:relative;z-index:5;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;text-align:center;padding:60px 20px}
+.depart-content h2{font-size:clamp(2rem,6vw,4rem);font-weight:800;margin-bottom:16px;opacity:0}
+.depart-sub{font-size:clamp(1rem,2vw,1.3rem);color:rgba(255,255,255,.5);max-width:500px;opacity:0}
+.depart-line{width:60px;height:2px;background:var(--accent);margin:30px auto;opacity:0}
+
+/* TIMELINE */
+.timeline-sec{position:relative;padding:100px 20px;background:var(--deep)}
+.timeline-sec h2{text-align:center;font-size:clamp(2rem,4vw,3rem);font-weight:800;margin-bottom:60px;background:linear-gradient(90deg,var(--accent),var(--sky));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.timeline{max-width:700px;margin:0 auto;position:relative;padding-left:40px}
+.timeline::before{content:'';position:absolute;left:15px;top:0;bottom:0;width:2px;background:linear-gradient(180deg,var(--accent),var(--sky),var(--gold))}
+.tl-item{position:relative;margin-bottom:40px;opacity:0;transform:translateX(-20px)}
+.tl-item.visible{opacity:1;transform:translateX(0);transition:all .6s cubic-bezier(.16,1,.3,1)}
+.tl-dot{position:absolute;left:-33px;top:4px;width:12px;height:12px;background:var(--accent);border-radius:50%;border:2px solid var(--deep);box-shadow:0 0 10px var(--accent)}
+.tl-time{font-family:'Space Grotesk',sans-serif;font-size:.8rem;color:var(--accent);letter-spacing:2px;margin-bottom:4px}
+.tl-title{font-size:1.1rem;font-weight:700;margin-bottom:4px}
+.tl-desc{font-size:.85rem;color:rgba(255,255,255,.5)}
+
+/* FOOTER */
+footer{padding:60px 20px;text-align:center;background:linear-gradient(180deg,var(--deep),#050a14)}
+footer h3{font-size:1.5rem;font-weight:300;margin-bottom:10px;color:rgba(255,255,255,.4)}
+footer p{font-size:.8rem;color:rgba(255,255,255,.2)}
+.hearts{display:flex;justify-content:center;gap:10px;margin-bottom:20px}
+.hearts span{font-size:1.5rem;animation:heartbeat 1.5s infinite}
+@keyframes heartbeat{0%,100%{transform:scale(1)}50%{transform:scale(1.2)}}
+
+@media(max-width:768px){
+.squad-grid{grid-template-columns:repeat(2,1fr);gap:12px}
+.night-grid{grid-template-columns:repeat(2,1fr)}
+.morning-grid{grid-template-columns:repeat(2,1fr)}
+.food-grid{grid-template-columns:repeat(2,1fr)}
+.car-svg{width:120px}
+}
+@media(max-width:480px){
+.squad-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- PARTICLES -->
+<div class="particles" id="particles"></div>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-img"></div>
+  <div class="hero-clouds">
+    <div class="cloud c1"></div>
+    <div class="cloud c2"></div>
+    <div class="cloud c3"></div>
+    <div class="cloud c4"></div>
+  </div>
+  <div class="hero-road"></div>
+  <div class="hero-lines"></div>
+  <div class="hero-content">
+    <p class="hero-date">1st – 2nd May 2026</p>
+    <h1 class="hero-title">2 Days. 1 Night.<br>Infinite Memories.</h1>
+    <p class="hero-sub">A cinematic road trip you'll feel before you live it</p>
+    <div class="hero-route">
+      DELHI <span>→</span> ALWAR <span>→</span> SARISKA <span>→</span> HOME
+    </div>
+  </div>
+  <div class="scroll-ind">
+    <p>Scroll to begin</p>
+    <div class="arrow"></div>
+  </div>
+</section>
+
+<!-- SQUAD -->
+<section class="squad-sec" id="squad">
+  <h2>THE SQUAD</h2>
+  <div class="squad-grid">
+    <div class="squad-card" data-delay="0">
+      <div class="squad-avatar">R</div>
+      <h3>Ritwik Chawla</h3>
+      <p class="role">🚗 The Driver</p>
+      <p class="loc">📍 A55 Meera Bagh · White i20</p>
+    </div>
+    <div class="squad-card" data-delay="100">
+      <div class="squad-avatar">Y</div>
+      <h3>Yash Mukhija</h3>
+      <p class="role">🎵 The DJ</p>
+      <p class="loc">📍 Ambica Vihar</p>
+    </div>
+    <div class="squad-card" data-delay="200">
+      <div class="squad-avatar">D</div>
+      <h3>Drishti Grover</h3>
+      <p class="role">📸 The Explorer</p>
+      <p class="loc">📍 Rajouri Garden</p>
+    </div>
+    <div class="squad-card" data-delay="300">
+      <div class="squad-avatar">S</div>
+      <h3>Sarthak</h3>
+      <p class="role">🎯 The Planner</p>
+      <p class="loc">📍 Faridabad · Final Pickup</p>
+    </div>
+  </div>
+</section>
+
+<!-- JOURNEY SCROLL -->
+<section class="journey-sec" id="journey">
+  <div class="journey-road">
+    <div class="road-bg"></div>
+    <div class="road-line" id="roadLine"></div>
+    <div class="car-container" id="carContainer">
+      <svg class="car-svg" viewBox="0 0 200 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="20" y="30" width="160" height="35" rx="10" fill="#e8e8e8" stroke="#ccc" stroke-width="1"/>
+        <path d="M50 30 Q55 8 90 8 L130 8 Q155 8 160 30" fill="#d0d0d0" stroke="#bbb" stroke-width="1"/>
+        <rect x="58" y="12" width="30" height="18" rx="3" fill="rgba(135,206,250,.5)" stroke="#aaa" stroke-width=".5"/>
+        <rect x="95" y="12" width="35" height="18" rx="3" fill="rgba(135,206,250,.5)" stroke="#aaa" stroke-width=".5"/>
+        <rect x="138" y="12" width="18" height="18" rx="3" fill="rgba(135,206,250,.5)" stroke="#aaa" stroke-width=".5"/>
+        <circle cx="55" cy="68" r="12" fill="#333" stroke="#555" stroke-width="2"/>
+        <circle cx="55" cy="68" r="6" fill="#666"/>
+        <circle cx="150" cy="68" r="12" fill="#333" stroke="#555" stroke-width="2"/>
+        <circle cx="150" cy="68" r="6" fill="#666"/>
+        <rect x="170" y="38" width="15" height="6" rx="3" fill="#ff4444" opacity=".8"/>
+        <rect x="170" y="46" width="15" height="6" rx="3" fill="#ff4444" opacity=".8"/>
+        <rect x="15" y="40" width="12" height="5" rx="2" fill="#ffcc00" opacity=".8"/>
+        <text x="100" y="52" text-anchor="middle" font-size="7" fill="#999" font-family="sans-serif">i20</text>
+      </svg>
+    </div>
+    <div class="journey-labels" id="journeyLabels">
+      <div class="j-label" id="jl1" style="top:35%;left:10%">🏠 Ritwik starts from Meera Bagh</div>
+      <div class="j-label" id="jl2" style="top:25%;left:25%">🎵 Picks up Yash — Ambica Vihar</div>
+      <div class="j-label" id="jl3" style="top:40%;left:40%">📸 Picks up Drishti — Rajouri Garden</div>
+      <div class="j-label" id="jl4" style="top:20%;left:55%">🍻 Fueling the vibe — Alcohol secured</div>
+      <div class="j-label" id="jl5" style="top:45%;left:65%">🌯 Chicken rolls, momos, snacks — loaded!</div>
+      <div class="j-label" id="jl6" style="top:30%;left:80%">🎯 Picks up Sarthak — Squad complete!</div>
+    </div>
+  </div>
+</section>
+
+<!-- PICKUP COMPLETE -->
+<section class="pickup-sec" id="pickup">
+  <div class="pickup-glow"></div>
+  <div class="pickup-content">
+    <h2>The Squad is Complete.</h2>
+    <p>Four friends. One car. Infinite vibes ahead.</p>
+  </div>
+</section>
+
+<!-- ROAD TRIP VIBES -->
+<section class="vibes-sec" id="vibes">
+  <div class="vibes-bg"><img src="images/road_vibes.png" alt="Road trip vibes"></div>
+  <div class="vibes-overlay"></div>
+  <div class="floating-snack" style="top:20%;left:10%">☕</div>
+  <div class="floating-snack" style="top:60%;right:10%;animation-delay:2s">🌯</div>
+  <div class="floating-snack" style="top:40%;left:75%;animation-delay:4s">🍟</div>
+  <div class="vibes-content">
+    <div class="music-waves">
+      <div class="music-wave"></div><div class="music-wave"></div><div class="music-wave"></div>
+      <div class="music-wave"></div><div class="music-wave"></div><div class="music-wave"></div>
+      <div class="music-wave"></div>
+    </div>
+    <div class="vibe-text">"<em>Cloudy weather.</em> Perfect vibes."</div>
+    <div class="vibe-text">"Music loud. <em>Windows down.</em>"</div>
+    <div class="vibe-text">"Chicken rolls & momos <em>hitting different</em> mid-journey 🌯"</div>
+    <div class="vibe-text">"<em>Conversations</em> that stay forever."</div>
+  </div>
+</section>
+
+<!-- ARRIVAL -->
+<section class="arrival-sec" id="arrival">
+  <div class="arrival-bg"><img src="images/villa_night.png" alt="Villa at night"></div>
+  <div class="arrival-overlay"></div>
+  <div class="arrival-content">
+    <p class="arrival-time">9:00 PM</p>
+    <p class="arrival-label">1st May 2026</p>
+    <h2 class="arrival-title">We Made It.</h2>
+  </div>
+</section>
+
+<!-- NIGHT CHILL -->
+<section class="night-sec" id="night">
+  <div class="neon-glow neon1"></div>
+  <div class="neon-glow neon2"></div>
+  <div class="neon-glow neon3"></div>
+  <div class="night-content">
+    <h2>NIGHT VIBES ✨</h2>
+    <div class="night-grid">
+      <div class="night-card"><div class="icon">🍹</div><h3>Jamun Vodka</h3><p>Cocktails that hit right</p></div>
+      <div class="night-card"><div class="icon">🎵</div><h3>Music & Vibes</h3><p>Speakers loud, stars out</p></div>
+      <div class="night-card"><div class="icon">🏊</div><h3>Pool Chill</h3><p>Night swim reflections</p></div>
+      <div class="night-card"><div class="icon">🌿</div><h3>Smoke & Chill</h3><p>Joints under the sky</p></div>
+      <div class="night-card"><div class="icon">🍗</div><h3>Kebabs & BBQ</h3><p>Grilled to perfection</p></div>
+      <div class="night-card"><div class="icon">🍜</div><h3>Midnight Maggi</h3><p>The classic late-night</p></div>
+      <div class="night-card"><div class="icon">🃏</div><h3>UNO Battles</h3><p>Friendships tested</p></div>
+      <div class="night-card"><div class="icon">💬</div><h3>Deep Talks</h3><p>Two rooms, one vibe</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- DAY 2 MORNING -->
+<section class="morning-sec" id="morning">
+  <div class="sunrise"></div>
+  <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:url('images/pool_day.png') center/cover;opacity:.15;z-index:0"></div>
+  <div class="morning-content">
+    <h2>Day 2 — A New Dawn</h2>
+    <p class="morning-sub">Waking up to paradise. No rush. Just peace.</p>
+    <div class="morning-grid">
+      <div class="morning-card"><div class="icon">🍳</div><h3>Omelette & Coffee</h3></div>
+      <div class="morning-card"><div class="icon">🏊</div><h3>Pool Morning Dip</h3></div>
+      <div class="morning-card"><div class="icon">🎱</div><h3>Billiards</h3></div>
+      <div class="morning-card"><div class="icon">🃏</div><h3>UNO Rematch</h3></div>
+    </div>
+  </div>
+</section>
+
+<!-- SAFARI -->
+<section class="safari-sec" id="safari">
+  <div class="safari-bg"><img src="images/safari_scene.png" alt="Sariska Safari"></div>
+  <div class="safari-overlay"></div>
+  <div class="safari-content">
+    <h2>🐅 Sariska Tiger Reserve</h2>
+    <p class="safari-sub">Into the wild. Jeeps rolling through dense forest. Eyes scanning for the majestic. Silence broken only by nature.</p>
+    <div class="tree-line">
+      <div class="tree" style="height:60px"></div>
+      <div class="tree" style="height:80px;animation-delay:.5s"></div>
+      <div class="tree" style="height:50px;animation-delay:1s"></div>
+      <div class="tree" style="height:90px;animation-delay:.3s"></div>
+      <div class="tree" style="height:70px;animation-delay:.8s"></div>
+      <div class="tree" style="height:55px;animation-delay:.2s"></div>
+      <div class="tree" style="height:85px;animation-delay:.6s"></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOD -->
+<section class="food-sec" id="food">
+  <div class="food-bg"><img src="images/bbq_food.png" alt="BBQ and food"></div>
+  <div class="food-overlay"></div>
+  <div class="food-content">
+    <h2>The Feast 🔥</h2>
+    <div class="food-grid">
+      <div class="food-card"><div class="icon">🍜</div><h3>Maggi</h3></div>
+      <div class="food-card"><div class="icon">🍢</div><h3>Kebabs</h3></div>
+      <div class="food-card"><div class="icon">🥩</div><h3>Barbecue</h3></div>
+      <div class="food-card"><div class="icon">🍹</div><h3>Cocktails</h3></div>
+      <div class="food-card"><div class="icon">🌯</div><h3>Chicken Rolls</h3></div>
+      <div class="food-card"><div class="icon">🥟</div><h3>Momos</h3></div>
+    </div>
+  </div>
+</section>
+
+<!-- DEPARTURE -->
+<section class="depart-sec" id="departure">
+  <div class="depart-bg"><img src="images/sunset_departure.png" alt="Sunset departure"></div>
+  <div class="depart-overlay"></div>
+  <div class="depart-content">
+    <div class="depart-line"></div>
+    <h2>Some trips stay forever.</h2>
+    <p class="depart-sub">We explored. We laughed. We lived. Now we carry it home — in our hearts, our photos, and our group chat.</p>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section class="timeline-sec" id="timeline">
+  <h2>THE JOURNEY — MINUTE BY MINUTE</h2>
+  <div class="timeline">
+    <div class="tl-item"><div class="tl-dot"></div><p class="tl-time">DAY 1 · 1:00 PM</p><h3 class="tl-title">Ritwik fires up the i20</h3><p class="tl-desc">Picks up Yash from Ambica Vihar, then Drishti from Rajouri Garden</p></div>
+    <div class="tl-item"><div class="tl-dot"></div><p class="tl-time">DAY 1 · 2:00 PM</p><h3 class="tl-title">Supplies Run</h3><p class="tl-desc">Alcohol, snacks, chicken rolls, momos — everything stocked for the crew</p></div>
+    <div class="tl-item"><div class="tl-dot"></div><p class="tl-time">DAY 1 · 3:00 PM</p><h3 class="tl-title">Sarthak picked up — Squad complete!</h3><p class="tl-desc">Four friends. One loaded car. Let's go.</p></div>
+    <div class="tl-item"><div class="tl-dot"></div><p class="tl-time">DAY 1 · 3:30 PM</p><h3 class="tl-title">Highway Mode: ON</h3><p class="tl-desc">Music cranked up. Snacks opened. Cloudy weather making it perfect.</p></div>
+    <div class="tl-item"><div class="tl-dot"></div><p class="tl-time">DAY 1 · 9:00 PM</p><h3 class="tl-title">Arrival at Airbnb Villa</h3><p class="tl-desc">Two rooms, a pool, billiards, and absolute freedom</p></div>
+    <div class="tl-item"><div class="tl-dot"></div><p class="tl-time">DAY 1 · 10:00 PM</p><h3 class="tl-title">Night Begins 🌙</h3><p class="tl-desc">Jamun vodka cocktails, kebabs on the grill, maggi cooking, UNO wars</p></div>
+    <div class="tl-item"><div class="tl-dot"></div><p class="tl-time">DAY 2 · 8:00 AM</p><h3 class="tl-title">Morning Paradise</h3><p class="tl-desc">Omelette & coffee. Pool dip. Billiards. Pure bliss.</p></div>
+    <div class="tl-item"><div class="tl-dot"></div><p class="tl-time">DAY 2 · 11:00 AM</p><h3 class="tl-title">Safari Time 🐅</h3><p class="tl-desc">Sariska Tiger Reserve — jeeps through the jungle, wildlife spotting</p></div>
+    <div class="tl-item"><div class="tl-dot"></div><p class="tl-time">DAY 2 · 2:00 PM</p><h3 class="tl-title">Last Feast</h3><p class="tl-desc">BBQ, kebabs, cocktails — one final feast before we leave</p></div>
+    <div class="tl-item"><div class="tl-dot"></div><p class="tl-time">DAY 2 · 4:00 PM</p><h3 class="tl-title">Homeward Bound</h3><p class="tl-desc">Checkout. Last photos. The drive home with memories forever.</p></div>
+    <div class="tl-item"><div class="tl-dot"></div><p class="tl-time">DAY 2 · EVENING</p><h3 class="tl-title">Back to Reality</h3><p class="tl-desc">But the group chat? That'll never be the same again. 💛</p></div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="hearts"><span>❤️</span><span>🧡</span><span>💛</span><span>💚</span></div>
+  <h3>Ritwik · Yash · Drishti · Sarthak</h3>
+  <p>1st – 2nd May 2026 · Delhi → Alwar → Sariska → Home</p>
+</footer>
+
+<script>
+// Particles
+const pc=document.getElementById('particles');
+for(let i=0;i<30;i++){const p=document.createElement('div');p.className='particle';p.style.left=Math.random()*100+'%';p.style.top=Math.random()*100+'%';p.style.animationDuration=(5+Math.random()*10)+'s';p.style.animationDelay=Math.random()*5+'s';pc.appendChild(p)}
+
+// Road dashes
+const rl=document.getElementById('roadLine');
+for(let i=0;i<40;i++){const d=document.createElement('div');d.className='road-dash';rl.appendChild(d)}
+
+// Intersection Observer for scroll reveals
+const obs=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');const delay=e.target.dataset.delay||0;e.target.style.transitionDelay=delay+'ms'}})},{threshold:0.2});
+
+document.querySelectorAll('.squad-card,.night-card,.morning-card,.food-card,.tl-item,.vibe-text').forEach(el=>obs.observe(el));
+
+// Journey car scroll animation
+const journeySec=document.getElementById('journey');
+const carContainer=document.getElementById('carContainer');
+const labels=document.querySelectorAll('.j-label');
+
+window.addEventListener('scroll',()=>{
+  const rect=journeySec.getBoundingClientRect();
+  const secH=journeySec.offsetHeight-window.innerHeight;
+  const scrolled=Math.max(0,Math.min(1,-rect.top/secH));
+  
+  // Move car
+  const carX=-40+scrolled*80;
+  carContainer.style.transform=`translateX(${carX}vw)`;
+  
+  // Road line movement
+  const rlEl=document.getElementById('roadLine');
+  rlEl.style.transform=`translateX(${-scrolled*800}px)`;
+  
+  // Show labels based on progress
+  labels.forEach((l,i)=>{
+    const threshold=(i+1)/(labels.length+1);
+    if(scrolled>=threshold-0.05)l.classList.add('visible');
+    else l.classList.remove('visible');
+  });
+});
+
+// Pickup section animation
+const pickupObs=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){const h2=e.target.querySelector('h2');const p=e.target.querySelector('p');if(h2){h2.style.transition='all 1s cubic-bezier(.16,1,.3,1)';h2.style.opacity='1';h2.style.transform='translateY(0)'}if(p){p.style.transition='all 1s .3s cubic-bezier(.16,1,.3,1)';p.style.opacity='1'}}})},{threshold:0.5});
+const pickupSec=document.getElementById('pickup');
+if(pickupSec)pickupObs.observe(pickupSec);
+
+// Arrival animation
+const arrObs=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){const els=e.target.querySelectorAll('.arrival-time,.arrival-label,.arrival-title');els.forEach((el,i)=>{el.style.transition=`all 1s ${i*0.3}s cubic-bezier(.16,1,.3,1)`;el.style.opacity='1';el.style.transform='translateY(0)'})}})},{threshold:0.5});
+const arrSec=document.getElementById('arrival');
+if(arrSec)arrObs.observe(arrSec);
+
+// Safari animation
+const safObs=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){const els=e.target.querySelectorAll('h2,.safari-sub');els.forEach((el,i)=>{el.style.transition=`all 1s ${i*0.3}s cubic-bezier(.16,1,.3,1)`;el.style.opacity='1'})}})},{threshold:0.3});
+const safSec=document.getElementById('safari');
+if(safSec)safObs.observe(safSec);
+
+// Food title
+const foodObs=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){const h2=e.target.querySelector('h2');if(h2){h2.style.transition='all 1s cubic-bezier(.16,1,.3,1)';h2.style.opacity='1'}}})},{threshold:0.3});
+const foodSec=document.getElementById('food');
+if(foodSec)foodObs.observe(foodSec);
+
+// Departure animation
+const depObs=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){const els=e.target.querySelectorAll('h2,.depart-sub,.depart-line');els.forEach((el,i)=>{el.style.transition=`all 1.2s ${i*0.4}s cubic-bezier(.16,1,.3,1)`;el.style.opacity='1'})}})},{threshold:0.4});
+const depSec=document.getElementById('departure');
+if(depSec)depObs.observe(depSec);
+
+// Morning sunrise trigger
+const mornObs=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){const sun=e.target.querySelector('.sunrise');if(sun)sun.style.animationPlayState='running';const els=e.target.querySelectorAll('h2,.morning-sub');els.forEach((el,i)=>{el.style.transition=`all 1s ${i*0.3+0.5}s cubic-bezier(.16,1,.3,1)`;el.style.opacity='1'})}})},{threshold:0.3});
+const mornSec=document.getElementById('morning');
+if(mornSec){mornSec.querySelector('.sunrise').style.animationPlayState='paused';mornObs.observe(mornSec)}
+
+// Smooth parallax on images
+window.addEventListener('scroll',()=>{
+  document.querySelectorAll('.vibes-bg img,.arrival-bg img,.safari-bg img,.food-bg img,.depart-bg img').forEach(img=>{
+    const rect=img.parentElement.parentElement.getBoundingClientRect();
+    const speed=0.3;
+    const yPos=rect.top*speed;
+    img.style.transform=`translateY(${yPos}px) scale(1.1)`;
+  });
+});
+</script>
+</body>
+</html>
